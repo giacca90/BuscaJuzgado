@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BuscadorComponent } from './Views/buscador/buscador.component';
+import { ResultadoComponent } from './Views/resultado/resultado.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [RouterOutlet, BuscadorComponent, ResultadoComponent],
 })
 export class AppComponent {
-  title = 'Front_Angular';
+  constructor() {
+    let copyright: HTMLSpanElement | null =
+      document.getElementById('copyright');
+    let data = new Date().getFullYear();
+    if (copyright) {
+      copyright.textContent = data.toString();
+    }
+  }
 }
