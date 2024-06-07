@@ -8,7 +8,7 @@
 					<span>Nombre o parte del nombre del Juzgado </span>
 				</td>
 				<td>
-					<input type="text" id="nombre" placeholder="Nombre o parte del nombre del Juzgado" (change)="this.juzgadoService.busca('nombre')" />
+					<input type="text" id="nombre" placeholder="Nombre o parte del nombre del Juzgado" (change)="this.busca()" />
 				</td>
 			</tr>
 			<tr>
@@ -16,7 +16,7 @@
 					<span>Nombre del pueblo del Juzgado </span>
 				</td>
 				<td>
-					<input type="text" id="pueblo" placeholder="Nombre del pueblo del Juzgado" (change)="this.juzgadoService.busca('pueblo')" />
+					<input type="text" id="pueblo" placeholder="Nombre del pueblo del Juzgado" (change)="this.busca()" />
 				</td>
 			</tr>
 			<tr>
@@ -24,7 +24,7 @@
 					<span>Nombre de la provincia del Juzgado </span>
 				</td>
 				<td>
-					<input type="text" id="provincia" placeholder="Nombre de la provincia del Juzgado" (change)="this.juzgadoService.busca('provincia')" />
+					<input type="text" id="provincia" placeholder="Nombre de la provincia del Juzgado" (change)="this.busca()" />
 				</td>
 			</tr>
 			<tr>
@@ -32,7 +32,7 @@
 					<span>Nombre de la comunidad autonómica del Juzgado </span>
 				</td>
 				<td>
-					<input type="text" id="comunidad" placeholder="Nombre de la comunidad autonómica del Juzgado" (change)="this.juzgadoService.busca('comunidad')" />
+					<input type="text" id="comunidad" placeholder="Nombre de la comunidad autonómica del Juzgado" (change)="this.busca()" />
 				</td>
 			</tr>
 		</tbody>

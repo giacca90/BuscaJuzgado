@@ -10,4 +10,13 @@ import {JuzgadoService} from '../../Controllers/JuzgadoService.service';
 })
 export class BuscadorComponent {
 	constructor(public juzgadoService: JuzgadoService) {}
+
+	busca() {
+		this.juzgadoService.busca(
+			(document.getElementById('nombre') as HTMLInputElement).value,
+			(document.getElementById('pueblo') as HTMLInputElement).value,
+			(document.getElementById('provincia') as HTMLInputElement).value,
+			(document.getElementById('comunidad') as HTMLInputElement).value,
+		);
+	}
 }

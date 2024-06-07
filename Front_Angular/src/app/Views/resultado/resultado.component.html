@@ -1,32 +1,34 @@
-<table border="1">
-	<thead>
-		<tr>
-			<th>Nombre</th>
-			<th>Dirección</th>
-			<th>Código Postal</th>
-			<th>Pueblo</th>
-			<th>Provincia</th>
-			<th>Comunidad Autonómica</th>
-			<th>Teléfono</th>
-			<th>Fax</th>
-			<th>Correo Electrónico</th>
-			<th>Juez Representante</th>
-		</tr>
-	</thead>
-	<tbody>
-		@for(juzgado of this.juzgadoService.resultados; track juzgado) {
-		<tr>
-			<th>{{ juzgado._nombre }}</th>
-			<th>{{ juzgado._direccion }}</th>
-			<th>{{ juzgado._codigo_postal }}</th>
-			<th>{{ juzgado._pueblo }}</th>
-			<th>{{ juzgado._provincia }}</th>
-			<th>{{ juzgado._comunidad }}</th>
-			<th>{{ juzgado._telefono }}</th>
-			<th>{{ juzgado._fax }}</th>
-			<th>{{ juzgado._correo }}</th>
-			<th>{{ juzgado._juez }}</th>
-		</tr>
-		}
-	</tbody>
-</table>
+<div class="tableContainer">
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Dirección</th>
+				<th>Código Postal</th>
+				<th>Pueblo</th>
+				<th>Provincia</th>
+				<th>Comunidad Autonómica</th>
+				<th>Teléfono</th>
+				<th>Fax</th>
+				<th>Correo Electrónico</th>
+				<th>Juez Representante</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(juzgado of this.juzgadoService.resultados; track juzgado) {
+			<tr>
+				<td>{{ juzgado.nombre }}</td>
+				<td>{{ juzgado.direccion }}</td>
+				<td>{{ juzgado.codigo_postal }}</td>
+				<td>{{ juzgado.pueblo }}</td>
+				<td>{{ juzgado.provincia }}</td>
+				<td>{{ juzgado.comunidad }}</td>
+				<td>{{ juzgado.telefono }}</td>
+				<td>{{ juzgado.fax }}</td>
+				<td>{{ juzgado.correo }}</td>
+				<td>{{ juzgado.juez }}</td>
+			</tr>
+			}
+		</tbody>
+	</table>
+</div>
