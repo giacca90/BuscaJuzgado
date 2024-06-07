@@ -15,4 +15,6 @@ public interface IJuzgadoService {
 
     public List<Juzgado> getJuzgadoForNombre(String pueblo);
 
+    public List<Juzgado> getCustomJuzgado(Juzgado juzgado);
+
 }

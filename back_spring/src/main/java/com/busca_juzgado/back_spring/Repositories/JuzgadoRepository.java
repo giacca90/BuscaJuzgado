@@ -19,4 +19,6 @@ public interface JuzgadoRepository extends JpaRepository<Juzgado, Long> {
 
     List<Juzgado> findByComunidadIgnoreCase(String pueblo);
 
+    // List<Juzgado> findByCustomJuzgado(Juzgado juzgado);
+
 }

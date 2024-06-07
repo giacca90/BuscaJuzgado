@@ -30,6 +30,15 @@ public class JuzgadoController {
         }
     }
 
+    @PostMapping("/custom")
+    public ResponseEntity<?> getCustomJuzgado(@RequestBody Juzgado juzgado) {
+        try {
+            return new ResponseEntity<List<Juzgado>>(this.service.getCustomJuzgado(juzgado), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getCause(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     @PostMapping("/nombre")
     public ResponseEntity<?> getJuzgadoForNombre(@RequestBody String nombre) {
         try {
