@@ -19,4 +19,6 @@ export class BuscadorComponent {
 			(document.getElementById('comunidad') as HTMLInputElement).value,
 		);
 	}
+
+	mostraVentana() {}
 }
