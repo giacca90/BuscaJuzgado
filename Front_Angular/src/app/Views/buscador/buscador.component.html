@@ -1,5 +1,6 @@
 <div class="buscador">
 	<h3>Escribe en los campos para buscar</h3>
+
 	<table>
 		<tbody>
 			<tr>
@@ -34,8 +35,8 @@
 					<input type="text" id="comunidad" placeholder="Nombre de la comunidad autonómica del Juzgado" (change)="this.busca()" />
 				</td>
 				<td>
-					@if(juzgadoService.bandera) {
-					<button type="submit" (click)="mostraVentana()"></button>
+					@if(juzgadoService.resultados.length > 0) {
+					<button type="button" (click)="abriVentana()">Ver como texto</button>
 					}
 				</td>
 			</tr>

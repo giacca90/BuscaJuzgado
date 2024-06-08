@@ -8,7 +8,6 @@ import {Juzgado} from '../Models/Juzgado';
 export class JuzgadoService {
 	public juzgados: Map<Juzgado, Juzgado[]> = new Map();
 	public resultados: Juzgado[] = [];
-	public bandera: Boolean = false;
 	//private url: string = 'http://localhost:8080/juzgados/custom';
 	private url: string = 'https://buscajuzgado-production.up.railway.app/juzgados/custom';
 	constructor(private http: HttpClient) {}
@@ -23,11 +22,6 @@ export class JuzgadoService {
 		this.http.post<Juzgado[]>(this.url, consulta).subscribe({
 			next: (response) => {
 				this.resultados = response;
-				if (this.resultados.length > 0) {
-					this.bandera = true;
-				} else {
-					this.bandera = false;
-				}
 			},
 
 			error: (error) => {
