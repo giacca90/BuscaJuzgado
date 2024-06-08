@@ -16,8 +16,8 @@ import com.busca_juzgado.back_spring.Models.Juzgado;
 import com.busca_juzgado.back_spring.Services.JuzgadoService;
 
 @RestController
-@RequestMapping("juzgados")
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping({ "juzgados" })
+@CrossOrigin(origins = { "https://giacca90.github.io", "http://localhost:4200" })
 public class JuzgadoController {
 
     @Autowired
@@ -32,7 +32,8 @@ public class JuzgadoController {
         }
     }
 
-    @PostMapping("/custom")
+    @CrossOrigin(origins = { "https://giacca90.github.io", "http://localhost:4200" })
+    @PostMapping({ "/custom" })
     public ResponseEntity<?> getCustomJuzgado(@RequestBody Juzgado juzgado) {
         try {
             return new ResponseEntity<List<Juzgado>>(this.service.getCustomJuzgado(juzgado), HttpStatus.OK);
