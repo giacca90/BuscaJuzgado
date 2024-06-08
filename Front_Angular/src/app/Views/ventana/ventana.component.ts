@@ -1,8 +1,8 @@
-import {CommonModule} from '@angular/common';
-import {Component, OnInit} from '@angular/core';
-import {MatDialogModule} from '@angular/material/dialog';
-import {JuzgadoService} from '../../Controllers/JuzgadoService.service';
-import {Juzgado} from '../../Models/Juzgado';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { JuzgadoService } from '../../Controllers/JuzgadoService.service';
+import { Juzgado } from '../../Models/Juzgado';
 
 @Component({
 	selector: 'app-ventana',
@@ -23,14 +23,14 @@ export class VentanaComponent implements OnInit {
 			// Asignar el contenido del párrafo
 			parrafo.innerHTML = `
         Nombre: ${juzgado.nombre}<br>
-        Direccion: ${juzgado.direccion}<br>
-        Codigo Postal: ${juzgado.codigo_postal}<br>
+        Dirección: ${juzgado.direccion}<br>
+        Código Postal: ${juzgado.codigo_postal}<br>
         Pueblo: ${juzgado.pueblo}<br>
         Provincia: ${juzgado.provincia}<br>
         Comunidad: ${juzgado.comunidad}<br>
-        Telefono: ${juzgado.telefono}<br>
+        Teléfono: ${juzgado.telefono}<br>
         Fax: ${juzgado.fax}<br>
-        Correo Electronico: ${juzgado.correo}<br>
+        Correo Electrónico: ${juzgado.correo}<br>
         Juez Representante: ${juzgado.juez}<br>
     `;
 

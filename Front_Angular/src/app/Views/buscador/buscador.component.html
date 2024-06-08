@@ -10,6 +10,12 @@
 				<td>
 					<input type="text" id="nombre" placeholder="Nombre o parte del nombre del Juzgado" (change)="this.busca()" />
 				</td>
+				<td>
+					@if(juzgadoService.resultados.length > 0) {
+
+					<span>Que datos quieres?? </span>
+					<input type="checkbox" id="checkTodos" (change)="this.checkAll()" checked /> Seleccionar Todos }
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -18,6 +24,14 @@
 				<td>
 					<input type="text" id="pueblo" placeholder="Nombre del pueblo del Juzgado" (change)="this.busca()" />
 				</td>
+				<td>
+					@if(juzgadoService.resultados.length > 0) {
+
+					<span>Nombre </span><input type="checkbox" id="nombre" class="checkboxes" checked disabled /> <span>Dirección </span><input type="checkbox" id="direccion" class="checkboxes" checked disabled /> <span>Código Postal</span
+					><input type="checkbox" id="codigo_postal" class="checkboxes" checked disabled /> <span>Pueblo</span><input type="checkbox" id="pueblo" class="checkboxes" checked disabled /> <span>Provincia</span
+					><input type="checkbox" id="provincia" class="checkboxes" checked disabled />
+					}
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -25,6 +39,14 @@
 				</td>
 				<td>
 					<input type="text" id="provincia" placeholder="Nombre de la provincia del Juzgado" (change)="this.busca()" />
+				</td>
+				<td>
+					@if(juzgadoService.resultados.length > 0) {
+
+					<span>Comunidad Autonómica </span><input type="checkbox" id="comunidad" class="checkboxes" checked disabled /> <span>Teléfono </span><input type="checkbox" id="telefono" class="checkboxes" checked disabled /> <span>Fax</span
+					><input type="checkbox" id="fax" class="checkboxes" checked disabled /> <span>Correo Electrónico</span><input type="checkbox" id="correo" class="checkboxes" checked disabled /> <span>Juez</span
+					><input type="checkbox" id="juez" class="checkboxes" checked disabled />
+					}
 				</td>
 			</tr>
 			<tr>
@@ -37,6 +59,7 @@
 				<td>
 					@if(juzgadoService.resultados.length > 0) {
 					<button type="button" (click)="abriVentana()">Ver como texto</button>
+					<button type="button" (click)="abriLista()">Ver como lista</button>
 					}
 				</td>
 			</tr>
