@@ -8,13 +8,19 @@
 					<span>Nombre o parte del nombre del Juzgado </span>
 				</td>
 				<td>
-					<input type="text" id="nombre" placeholder="Nombre o parte del nombre del Juzgado" (change)="this.busca()" />
+					<input type="text" id="nombre" placeholder="Nombre Juzgado" (change)="this.busca()" />
 				</td>
 				<td>
 					@if(juzgadoService.resultados.length > 0) {
 
-					<span>Que datos quieres?? </span>
-					<input type="checkbox" id="checkTodos" (change)="this.checkAll()" checked /> Seleccionar Todos }
+					<div>
+						<span>Que datos quieres?? </span>
+						<div class="check">
+							<span>Seleccionar Todos</span>
+							<input type="checkbox" id="checkTodos" (change)="this.checkAll()" checked />
+						</div>
+					</div>
+					}
 				</td>
 			</tr>
 			<tr>
@@ -27,9 +33,11 @@
 				<td>
 					@if(juzgadoService.resultados.length > 0) {
 
-					<span>Nombre </span><input type="checkbox" id="nombre" class="checkboxes" checked disabled /> <span>Dirección </span><input type="checkbox" id="direccion" class="checkboxes" checked disabled /> <span>Código Postal</span
-					><input type="checkbox" id="codigo_postal" class="checkboxes" checked disabled /> <span>Pueblo</span><input type="checkbox" id="pueblo" class="checkboxes" checked disabled /> <span>Provincia</span
-					><input type="checkbox" id="provincia" class="checkboxes" checked disabled />
+					<div class="check"><span>Nombre </span><input type="checkbox" id="nombre" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Dirección </span><input type="checkbox" id="direccion" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Código Postal</span><input type="checkbox" id="codigo_postal" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Pueblo</span><input type="checkbox" id="pueblo" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Provincia</span><input type="checkbox" id="provincia" class="checkboxes" checked disabled /></div>
 					}
 				</td>
 			</tr>
@@ -42,10 +50,11 @@
 				</td>
 				<td>
 					@if(juzgadoService.resultados.length > 0) {
-
-					<span>Comunidad Autonómica </span><input type="checkbox" id="comunidad" class="checkboxes" checked disabled /> <span>Teléfono </span><input type="checkbox" id="telefono" class="checkboxes" checked disabled /> <span>Fax</span
-					><input type="checkbox" id="fax" class="checkboxes" checked disabled /> <span>Correo Electrónico</span><input type="checkbox" id="correo" class="checkboxes" checked disabled /> <span>Juez</span
-					><input type="checkbox" id="juez" class="checkboxes" checked disabled />
+					<div class="check"><span>Comunidad Autonómica </span><input type="checkbox" id="comunidad" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Teléfono </span><input type="checkbox" id="telefono" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Fax</span><input type="checkbox" id="fax" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Correo Electrónico</span><input type="checkbox" id="correo" class="checkboxes" checked disabled /></div>
+					<div class="check"><span>Juez</span><input type="checkbox" id="juez" class="checkboxes" checked disabled /></div>
 					}
 				</td>
 			</tr>
