@@ -2,8 +2,14 @@
 :root {
 	--color-fondo-oscuro: rgb(30, 30, 30);
 	--color-texto-oscuro: #ffffff;
-	--color-background-input: #4e4e4e;
-	--color-background-button: #787878;
+	--color-background-element-oscuro: #4e4e4e;
+	--color-background-element-claro: #787878;
+}
+
+html.modo-oscuro {
+	scrollbar-color: var(--color-background-element-claro) var(--color-background-element-oscuro);
+	background-color: var(--color-fondo-oscuro);
+	color: var(--color-texto-oscuro);
 }
 
 html,
@@ -15,76 +21,65 @@ body {
 	transition: background-color 0.3s, color 0.3s;
 }
 
-html,
-body.modo-oscuro {
-	background-color: var(--color-fondo-oscuro);
-	color: var(--color-texto-oscuro);
-	scrollbar-color: #787878 #4e4e4e;
-}
-
-body.modo-oscuro input[type='text'] {
-	background-color: #4e4e4e;
+html.modo-oscuro input[type='text'] {
+	background-color: var(--color-background-element-oscuro);
 	color: white;
 }
 
-body.modo-oscuro input[type='text']:not(:empty) {
-	background-color: #4e4e4e;
+html.modo-oscuro input[type='text']:not(:empty) {
+	background-color: var(--color-background-element-oscuro);
 }
 
-body.modo-oscuro input[type='text']:hover {
+html.modo-oscuro input[type='text']:hover {
 	border: 1px solid white;
 }
 
-body.modo-oscuro input[type='text']:focus {
+html.modo-oscuro input[type='text']:focus {
 	border: 2px solid white;
 }
 
-body.modo-oscuro input:-webkit-autofill,
-body.modo-oscuro input:-webkit-autofill:hover,
-body.modo-oscuro input:-webkit-autofill:focus {
-	-webkit-box-shadow: 0 0 0px 1000px #4e4e4e inset;
+html.modo-oscuro input:-webkit-autofill,
+html.modo-oscuro input:-webkit-autofill:hover,
+html.modo-oscuro input:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px var(--color-background-element-oscuro) inset;
 	-webkit-text-fill-color: white;
 }
 
-body.modo-oscuro input[type='checkbox'] {
-	background-color: #4e4e4e;
-}
-
-body.modo-oscuro .check {
+html.modo-oscuro .check {
 	border: 1px solid white;
 }
 
-body.modo-oscuro button:hover {
+html.modo-oscuro button:hover {
 	border: 1.5px solid white;
 }
 
-body.modo-oscuro button.boton:hover {
+html.modo-oscuro button.boton:hover {
 	border: none;
 }
 
-body.modo-oscuro button {
+html.modo-oscuro button {
 	background-color: var(--color-background-button);
 	color: white;
 }
 
-body.modo-oscuro #ventana {
+html.modo-oscuro #ventana {
 	background-color: var(--color-fondo-oscuro);
 	height: 100vh;
 	margin: 1px;
 	padding: 9px;
 }
 
-body.modo-oscuro #lista {
+html.modo-oscuro #lista {
 	background-color: var(--color-fondo-oscuro);
 	height: 100vh;
 	margin: 1px;
 	padding: 9px;
 }
 
-body.modo-oscuro .header {
+html.modo-oscuro .header {
 	background-color: rgb(0, 60, 255);
 }
 
-body.modo-oscuro .footer {
+html.modo-oscuro .footer {
 	background-color: rgb(0, 60, 255);
 }

@@ -22,7 +22,7 @@ export class AppComponent {
 	cambiaEstilo() {
 		console.log(document.body.classList.toString());
 
-		if (document.body.classList.toString() === 'mat-typography modo-oscuro') {
+		if (document.body.classList.toString().includes('modo-oscuro')) {
 			document.body.classList.remove('modo-oscuro');
 		} else {
 			document.body.classList.add('modo-oscuro');
