@@ -18,4 +18,14 @@ export class AppComponent {
 			copyright.textContent = data.toString();
 		}
 	}
+
+	cambiaEstilo() {
+		console.log(document.body.classList.toString());
+
+		if (document.body.classList.toString() === 'mat-typography modo-oscuro') {
+			document.body.classList.remove('modo-oscuro');
+		} else {
+			document.body.classList.add('modo-oscuro');
+		}
+	}
 }

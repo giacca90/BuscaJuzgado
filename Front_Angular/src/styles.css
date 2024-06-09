@@ -1,13 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--color-fondo-oscuro: rgb(30, 30, 30);
+	--color-texto-oscuro: #ffffff;
+	--color-background-input: #4e4e4e;
+	--color-background-button: #787878;
+}
 
 html,
 body {
-	height: 100%;
 	margin: 0;
 	padding: 0;
-}
-body {
-	margin: 0;
 	font-family: Roboto, 'Helvetica Neue', sans-serif;
 	height: 100%;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.modo-oscuro {
+	background-color: var(--color-fondo-oscuro);
+	color: var(--color-texto-oscuro);
+	scrollbar-color: #787878 #4e4e4e;
+}
+
+body.modo-oscuro input[type='text'] {
+	background-color: #4e4e4e;
+	color: white;
+}
+
+body.modo-oscuro input[type='text']:not(:empty) {
+	background-color: #4e4e4e;
+}
+
+body.modo-oscuro input[type='text']:hover {
+	border: 1px solid white;
+}
+
+body.modo-oscuro input[type='text']:focus {
+	border: 2px solid white;
+}
+
+body.modo-oscuro input:-webkit-autofill,
+body.modo-oscuro input:-webkit-autofill:hover,
+body.modo-oscuro input:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px #4e4e4e inset;
+	-webkit-text-fill-color: white;
+}
+
+body.modo-oscuro input[type='checkbox'] {
+	background-color: #4e4e4e;
+}
+
+body.modo-oscuro .check {
+	border: 1px solid white;
+}
+
+body.modo-oscuro button:hover {
+	border: 1.5px solid white;
+}
+
+body.modo-oscuro button.boton:hover {
+	border: none;
+}
+
+body.modo-oscuro button {
+	background-color: var(--color-background-button);
+	color: white;
+}
+
+body.modo-oscuro #ventana {
+	background-color: var(--color-fondo-oscuro);
+	height: 100vh;
+	margin: 1px;
+	padding: 9px;
+}
+
+body.modo-oscuro #lista {
+	background-color: var(--color-fondo-oscuro);
+	height: 100vh;
+	margin: 1px;
+	padding: 9px;
+}
+
+body.modo-oscuro .header {
+	background-color: rgb(0, 60, 255);
+}
+
+body.modo-oscuro .footer {
+	background-color: rgb(0, 60, 255);
 }

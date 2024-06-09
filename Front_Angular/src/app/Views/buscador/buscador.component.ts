@@ -27,6 +27,9 @@ export class BuscadorComponent {
 		const dialogRef = this.dialog.open(VentanaComponent, {
 			width: '80%',
 			height: '80%',
+			/* 			styles: {
+				background: 'black',
+			}, */
 		});
 
 		dialogRef.afterClosed().subscribe((result) => {
