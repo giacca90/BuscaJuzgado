@@ -1,77 +1,51 @@
+<h3>Escribe en los campos para buscar</h3>
 <div class="buscador">
-	<h3>Escribe en los campos para buscar</h3>
+	<div class="col1">
+		<div class="span-input">
+			<span>Nombre o parte del nombre del Juzgado </span>
+			<input type="text" id="nombre" placeholder="Nombre Juzgado" (change)="this.busca()" />
+		</div>
+		<div class="span-input">
+			<span>Nombre del pueblo del Juzgado </span>
+			<input type="text" id="pueblo" placeholder="Nombre del pueblo del Juzgado" (change)="this.busca()" />
+		</div>
+		<div class="span-input">
+			<span>Nombre de la provincia del Juzgado </span>
+			<input type="text" id="provincia" placeholder="Nombre de la provincia del Juzgado" (change)="this.busca()" />
+		</div>
+		<div class="span-input">
+			<span>Nombre de la comunidad autonómica del Juzgado </span>
+			<input type="text" id="comunidad" placeholder="Nombre de la comunidad autonómica del Juzgado" (change)="this.busca()" />
+		</div>
+	</div>
 
-	<table>
-		<tbody>
-			<tr>
-				<td>
-					<span>Nombre o parte del nombre del Juzgado </span>
-				</td>
-				<td>
-					<input type="text" id="nombre" placeholder="Nombre Juzgado" (change)="this.busca()" />
-				</td>
-				<td>
-					@if(juzgadoService.resultados.length > 0) {
-
-					<div>
-						<span>Que datos quieres?? </span>
-						<div class="check">
-							<span>Seleccionar Todos</span>
-							<input type="checkbox" id="checkTodos" (change)="this.checkAll()" checked />
-						</div>
-					</div>
-					}
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<span>Nombre del pueblo del Juzgado </span>
-				</td>
-				<td>
-					<input type="text" id="pueblo" placeholder="Nombre del pueblo del Juzgado" (change)="this.busca()" />
-				</td>
-				<td>
-					@if(juzgadoService.resultados.length > 0) {
-
-					<div class="check"><span>Nombre </span><input type="checkbox" id="nombre" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Dirección </span><input type="checkbox" id="direccion" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Código Postal</span><input type="checkbox" id="codigo_postal" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Pueblo</span><input type="checkbox" id="pueblo" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Provincia</span><input type="checkbox" id="provincia" class="checkboxes" checked disabled /></div>
-					}
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<span>Nombre de la provincia del Juzgado </span>
-				</td>
-				<td>
-					<input type="text" id="provincia" placeholder="Nombre de la provincia del Juzgado" (change)="this.busca()" />
-				</td>
-				<td>
-					@if(juzgadoService.resultados.length > 0) {
-					<div class="check"><span>Comunidad Autonómica </span><input type="checkbox" id="comunidad" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Teléfono </span><input type="checkbox" id="telefono" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Fax</span><input type="checkbox" id="fax" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Correo Electrónico</span><input type="checkbox" id="correo" class="checkboxes" checked disabled /></div>
-					<div class="check"><span>Juez</span><input type="checkbox" id="juez" class="checkboxes" checked disabled /></div>
-					}
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<span>Nombre de la comunidad autonómica del Juzgado </span>
-				</td>
-				<td>
-					<input type="text" id="comunidad" placeholder="Nombre de la comunidad autonómica del Juzgado" (change)="this.busca()" />
-				</td>
-				<td>
-					@if(juzgadoService.resultados.length > 0) {
-					<button type="button" (click)="abriVentana()">Ver como texto</button>
-					<button type="button" (click)="abriLista()">Ver como lista</button>
-					}
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="col2">
+		@if(juzgadoService.resultados.length == 0) {
+		<div class="checkers">
+			<span>Que datos quieres?? </span>
+			<div class="check">
+				<span>Seleccionar Todos</span>
+				<input type="checkbox" id="checkTodos" (change)="this.checkAll()" checked />
+			</div>
+		</div>
+		<div class="checkers">
+			<div class="check"><span> Nombre </span><input type="checkbox" id="nombre" class="checkboxes" checked disabled /></div>
+			<div class="check"><span> Dirección </span><input type="checkbox" id="direccion" class="checkboxes" checked disabled /></div>
+			<div class="check"><span> Código Postal</span><input type="checkbox" id="codigo_postal" class="checkboxes" checked disabled /></div>
+			<div class="check"><span> Pueblo</span><input type="checkbox" id="pueblo" class="checkboxes" checked disabled /></div>
+			<div class="check"><span> Provincia</span><input type="checkbox" id="provincia" class="checkboxes" checked disabled /></div>
+		</div>
+		<div class="checkers">
+			<div class="check"><span>Comunidad Autonómica </span><input type="checkbox" id="comunidad" class="checkboxes" checked disabled /></div>
+			<div class="check"><span>Teléfono </span><input type="checkbox" id="telefono" class="checkboxes" checked disabled /></div>
+			<div class="check"><span>Fax</span><input type="checkbox" id="fax" class="checkboxes" checked disabled /></div>
+			<div class="check"><span>Correo Electrónico</span><input type="checkbox" id="correo" class="checkboxes" checked disabled /></div>
+			<div class="check"><span>Juez</span><input type="checkbox" id="juez" class="checkboxes" checked disabled /></div>
+		</div>
+		<div class="checkers">
+			<button type="button" (click)="abriVentana()">Ver como texto</button>
+			<button type="button" (click)="abriLista()">Ver como lista</button>
+		</div>
+		}
+	</div>
 </div>

@@ -1,9 +1,10 @@
 :host {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	flex: 1;
 	margin: 0;
 	padding: 0;
+	max-height: 200vh;
 }
 
 h1 {
@@ -66,5 +67,5 @@ button img {
 }
 
 button:hover img {
-	transform: scale(0.8); /* Escala la imagen al 120% */
+	transform: scale(0.8);
 }
