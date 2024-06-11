@@ -12,3 +12,5 @@ Está dividida en tres partes:
 
 >Esta app es simplemente para experimentar con Spring, Hibernate y PostgreSQL
 No tiene ningún uso real XD
+
+<img src="https://raw.githubusercontent.com/giacca90/BuscaJuzgado/main/demo.gif" alt="Demostración">
