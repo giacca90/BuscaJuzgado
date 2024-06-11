@@ -5,7 +5,7 @@
 input[type='text'] {
 	border: 1px solid grey;
 	border-radius: 8px;
-	margin: 5px 15px;
+	margin: 5px 14px;
 }
 
 input[type='text']:hover {
@@ -41,4 +41,52 @@ button {
 
 button:hover {
 	border: 1.5px solid black;
+}
+
+table {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: 5px;
+	justify-content: space-between;
+}
+
+.col1 {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.span-input {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.col1 > .span-input > span {
+	white-space: nowrap;
+	width: 350px;
+}
+
+.col2 {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: max-content;
+}
+
+.checkers {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 4px;
+}
+
+@media (max-width: 1024px) {
+	.buscador .span-input {
+		flex-direction: column;
+		align-items: normal;
+	}
 }
