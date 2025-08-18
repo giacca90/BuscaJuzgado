@@ -1,3 +1,15 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+	"java.configuration.updateBuildConfiguration": "interactive",
+	"java.compile.nullAnalysis.mode": "automatic",
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"server": "localhost",
+			"port": 5432,
+			"driver": "PostgreSQL",
+			"name": "BuscaJuzgados",
+			"database": "buscajuzgado",
+			"username": "postgres"
+		}
+	]
 }

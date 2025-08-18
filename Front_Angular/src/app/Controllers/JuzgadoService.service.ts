@@ -1,15 +1,15 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Juzgado} from '../Models/Juzgado';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Juzgado } from "../Models/Juzgado";
 
 @Injectable({
-	providedIn: 'root',
+	providedIn: "root",
 })
 export class JuzgadoService {
 	public juzgados: Map<Juzgado, Juzgado[]> = new Map();
 	public resultados: Juzgado[] = [];
-	//private url: string = 'http://localhost:8080/juzgados/custom';
-	private url: string = 'https://buscajuzgado-production.up.railway.app/juzgados/custom';
+	private url: string = "http://localhost:8080/juzgados/custom";
+	//private url: string = 'https://buscajuzgado-production.up.railway.app/juzgados/custom';
 	constructor(private http: HttpClient) {}
 
 	busca(nombre: string, pueblo: string, provincia: string, comunidad: string) {
