@@ -4,6 +4,17 @@
 		<meta charset="utf-8" />
 		<title>BuscaJuzgado</title>
 		<base href="/" />
+		<script>
+			// Esto corre antes de que Angular pinte nada
+			(function () {
+				const userPref = localStorage.getItem("theme");
+				if (userPref) {
+					document.documentElement.classList.toggle("modo-oscuro", userPref === "dark");
+				} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+					document.documentElement.classList.add("modo-oscuro");
+				}
+			})();
+		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/x-icon" href="./assets/Logo-LJS-morado.ico" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
