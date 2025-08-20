@@ -31,6 +31,9 @@ services:
             SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
             SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
             SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+        volumes:
+            - /etc/letsencrypt/live/giacca90.ddns.net/fullchain.pem:/certs/fullchain.pem:ro
+            - /etc/letsencrypt/live/giacca90.ddns.net/privkey.pem:/certs/privkey.pem:ro
         depends_on:
             postgres:
                 condition: service_healthy
