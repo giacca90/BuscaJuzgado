@@ -8,7 +8,7 @@ import { Juzgado } from "../Models/Juzgado";
 export class JuzgadoService {
 	public juzgados: Map<Juzgado, Juzgado[]> = new Map();
 	public resultados: Juzgado[] = [];
-	private url: string = "http://giacca90.ddns.net:5000/juzgados/custom";
+	private url: string = "https://giacca90.ddns.net:5000/juzgados/custom";
 	//private url: string = "http://localhost:5000/juzgados/custom";
 	//private url: string = 'https://buscajuzgado-production.up.railway.app/juzgados/custom';
 	constructor(private http: HttpClient) {}
