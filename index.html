@@ -23,5 +23,17 @@
 </style><link rel="stylesheet" href="styles-NHZQNO64.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-NHZQNO64.css"></noscript><link rel="modulepreload" href="chunk-5MLA2ONJ.js"></head>
 	<body class="mat-typography">
 		<app-root></app-root>
+		<script>
+			// Registro de visitas
+			fetch("https://giacca90.ddns.net:5011/log", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					project: "BuscaJuzgados", // Identifica tu proyecto
+					url: window.location.href,
+					referrer: document.referrer,
+				}),
+			}).catch((err) => console.error("No se pudo registrar visita:", err));
+		</script>
 	<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-ZAV37HTQ.js" type="module"></script></body>
 </html>
